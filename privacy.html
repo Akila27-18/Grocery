@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+    <link href="privacy.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image" href="image/logo.png" />
+    <title>Grocery at your Doorstep</title>
+</head>
+<body>
+    <header>Fresh and Organic Produce From our Farmers to your Kitchen</header>
+    
+        <div class="head">
+            <div class="logo">
+              <div><a href="index.html"><img src="image/logo.png"></a></div>
+              <div><form id="searchForm" target="_blank">
+                <input type="text" id="searchInput" placeholder="Search for products" />
+                <button type="submit">Search <img src="image/search icon.png"></button>
+              </form>
+            </div>                 
+                  <script>
+                    document.getElementById('searchForm').addEventListener('submit', function(e) {
+                      e.preventDefault();
+                      const query = document.getElementById('searchInput').value;
+                      const site = "yourwebsite.com";
+                      const searchUrl = `https://www.google.com/search?q=site:${site}+${encodeURIComponent(query)}`;
+                      window.open(searchUrl, '_blank');
+                    });
+                  </script>
+                  
+        </div>
+        <div>
+            <nav class="navbar">
+              <input type="checkbox" id="menu-toggle">
+              <label for="menu-toggle" class="menu-icon">&#9776;</label> 
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a href="category.html">Categories</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="bestsale.html">Best Sales</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="blog.html">Blogs</a>
+                  </li>
+                </ul>
+                <div class="navbar-right">
+                  <a href="cart.html" class="cart-link">
+                    <i class="fas fa-shopping-cart"><a href="cart.html"><img src="image/cart icon.png" width="50px"></a></i>
+                    <span class="cart-count">0</span>
+                  </a>
+                  <div class="login-dropdown">
+                    <a href="log.html" class="login-link">My Account</a>
+                    <div class="login-form">
+                      <!-- Login form elements -->
+                    </div>
+                  </div>
+                </div>
+              </nav>
+        </div>
+       
+
+        </div>
+        <script>
+            const cartCount = document.querySelector(".cart-count");
+
+function updateCartCount(count) {
+  cartCount.textContent = count;
+}
+
+// Example: Incrementing the cart count (replace with your actual logic)
+function addItemToCart() {
+  let currentCount = parseInt(cartCount.textContent);
+  updateCartCount(currentCount + 1);
+}
+</script> 
+
+<div class="privacy-container">
+  <h1>Privacy Policy</h1>
+  <p>
+    Grocery at Doorstep works to ensure that your privacy is protected when using our website. We have a policy setting out how your personal data will be processed and protected. Applicable law and our practices change over time. If we decide to update our Policy, we will post the changes on this site. You should check this page from time to time to ensure that you are happy with any changes.
+  </p>
+
+  <h2>Your Personal Data</h2>
+  <p>
+    In providing your personal data, you consent to us using the data collected in order to meet our commitments to you and to provide you with the service you expect. We need your data for the following purposes:
+  </p>
+  <ul>
+    <li>To create your personal account at Sonee Sports (i.e. your name and email address).</li>
+    <li>To validate that you are of legal age for shopping online (i.e. date of birth).</li>
+    <li>To process your orders through our website (i.e. your name, postal address, and mode of payment).</li>
+    <li>To send you marketing offers such as newsletters and latest Sonee Sports affiliated events (i.e. your name and email address).</li>
+    <li>To update and contact you in the event of any problems with the delivery of your items (i.e. contact number, address).</li>
+    <li>To answer your queries and to inform you of important updates (i.e. your email address).</li>
+    <li>To notify the winners in competitions arranged online if in case you joined (i.e. your email address, name, home address and telephone number).</li>
+    <li>To analyze your personal data to provide you with relevant marketing offers and information (i.e. name, buying habits).</li>
+  </ul>
+
+  <p>
+    We will only keep your data for as long as necessary to carry out our services to you and for as long as we are required by the Maldivian laws. After this, your personal data will be deleted. We cannot remove your data when there is a legal storage requirement, such as for taxation purposes or anything legally important held by the Maldivian Laws.
+  </p>
+
+  <h2>User Profile Image Upload - Sonee Sports Mobile App</h2>
+  <p>
+    At Sonee Sports Mobile App, we are committed to safeguarding the privacy of our users. This Privacy Policy outlines how we collect, use, disclose, and protect your personal information, particularly concerning user profile image uploads. By using our services...
+  </p>
+</div>
+
+<!-- Contact CTA -->
+<div class="contact-strip">
+  <div class="contact-box">
+    <strong>Get in Touch with us</strong><br>
+    <span>+91 91010 90000</span>
+  </div>
+  
+</div>
+
+
+<!-- Feature Icons Row -->
+<section class="features-row">
+  <div class="feature">
+  <img src="image/free shipping icon.png"><strong>Free Shipping</strong><br><small>For Orders Above 500</small>
+  </div>
+  <div class="feature">
+  <img src="image/fresh produce icon.png"><strong>Fresh Produce</strong><br><small>Guaranteed Product Warranty</small>
+  </div>
+  <div class="feature">
+  <img src="image/safety icon.png"> <strong>100% Safety & Security</strong><br><small>Your Data is Highly Secured</small>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="main-footer">
+  <div class="footer-col">
+    <h4><img src="image/logo.png"></h4>
+    <h3>Fresh groceries, particularly fruits, vegetables, whole grains, and lean proteins, play a crucial role in nourishing our bodies and promoting overall well-being</h3>
+  </div>
+  <div class="footer-col">
+    <h4>NAVIGATE</h4>
+    <ul>
+      <li><a href="privacy.html">Privacy Policy</a> </li>
+      <li><a href="terms.html">Terms & Conditions</a></li>
+      <li><a href="terms.html">How to Order</a></li>
+      <li><a href="about.html">About Us</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <h4>G-STORE</h4>
+    <p>Reg: T21542GST548</p>
+    <p>TIN: 14578452884</p>
+    <p>Email: groceries at doorstep@gmail.com</p>
+  </div>
+  <h3>Copyrights 2022 &copy;Groceries at Doorstep Ltd</h3>
+</footer>
+
+</body>
+</html>

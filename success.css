@@ -1,0 +1,397 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans';
+    
+}
+body{
+  background-color: #fffafa;
+}
+header{
+    background-color: #4EB528;
+    color: white;
+    font-size: 25px;
+    padding: 10px;
+    text-align: center;
+}
+.head{
+    margin: 10px;
+    width: 100%;
+    height: 250px;
+    border: 4px solid whitesmoke;
+}
+.logo{
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    padding-left: 50px;
+    padding-top: 30px;
+    gap: 400px;
+}
+#searchForm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+  }
+  
+  #searchInput {
+    font-size: large;
+    padding: 10px;
+    width: 350px;
+    border: 3px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    padding: 10px 15px;
+    margin-left: 8px;
+    background-color: #FF7C08;
+    font-size: 20px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .navbar {
+    padding-left: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    font-weight: bolder;
+    font-size: 35px;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    width: 100%;
+  }
+ 
+  
+  .navbar-brand {
+    font-weight: bold;
+  }
+  
+  .navbar-nav {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+  }
+  
+  .nav-item a {
+    color: black;
+    text-decoration: none;
+  }
+  
+  .navbar-right {
+    top: 0;
+    padding-right: 700px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }
+  
+  .cart-link {
+    position: relative;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #4EB528;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 4px;
+    font-size: 20px;
+  }
+  
+  .login-dropdown {
+    position: relative;
+  }
+  .login-dropdown a{
+    text-decoration: none;
+    color: white;
+    background-color: #4EB528;
+    border: 1px solid black;
+    padding: 5px;
+  }
+  
+  .login-form {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    z-index: 1;
+  }
+  
+  .login-dropdown:hover .login-form {
+    display: block;
+  }
+  .success-container {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  }
+  
+  .success-container img {
+    width: 80px;
+    margin-bottom: 1rem;
+  }
+  
+  .success-container h1 {
+    color: #2e7d32;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .success-container p {
+    color: #333;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+  
+  .success-container button {
+    padding: 0.8rem 2rem;
+    background-color: #32cd32;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  button a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .success-container button:hover {
+    background-color: #28a428;
+  }
+
+.contact-strip {
+  background: orange;
+  width: 300px;
+  color: white;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  position: relative;
+}
+.contact-strip::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-left: 40px solid #001a33;
+  border-top: 40px solid transparent;
+  border-bottom: 40px solid transparent;
+  height: 0;
+  width: 0;
+}
+
+.features-row {
+  position:relative;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 10%;
+  background: #f4f6f5;
+  text-align: center;
+}
+.feature {
+  width: 30%;
+  font-size: 16px;
+}
+.feature strong {
+  display: block;
+  margin-top: 5px;
+}
+
+.main-footer {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 20px;
+  gap: 20px;
+  padding: 40px;
+  background: #011d3a;
+  color: white;
+  flex-wrap: wrap;
+  font-size: 20px;
+}
+.main-footer .footer-col {
+  width: 30%;
+}
+.main-footer h4 {
+  font-size: 20px;
+  margin: 20px;
+}
+.main-footer .green-text {
+  color: #00cc66;
+}
+.main-footer ul {
+  list-style: none;
+  padding: 20px;
+}
+.main-footer ul li {
+  margin-bottom: 6px;
+}
+/* Base styles already apply to desktops */
+
+/* Tablets (landscape and portrait) */
+@media (max-width: 1024px) {
+  .logo {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-left: 0;
+  }
+
+  .navbar {
+    padding: 10px 20px;
+    font-size: 18px;
+  }
+
+  .navbar-right {
+    gap: 15px;
+    padding-right: 0;
+  }
+
+  .container {
+    margin: 0 auto;
+    padding: 1rem;
+    width: 90%;
+  }
+
+  .features-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .main-footer {
+    flex-direction: column;
+    align-items: center;
+    font-size: 18px;
+  }
+
+  .main-footer .footer-col {
+    width: 90%;
+  }
+}
+
+/* Mobile devices (portrait and smaller tablets) */
+@media (max-width: 768px) {
+  .logo {
+    flex-direction: column;
+    padding: 10px 0;
+    text-align: center;
+    gap: 10px;
+  }
+
+  #searchForm {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #searchInput {
+    width: 90%;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    background-color: #4EB528;
+    padding: 10px 0;
+  }
+
+  .navbar-nav .nav-item {
+    padding: 10px;
+    width: 100%;
+  }
+
+  #menu-toggle:checked + .menu-icon + .navbar-nav {
+    display: flex;
+  }
+
+  .navbar-right {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .container {
+    padding: 1rem;
+    width: 95%;
+    margin: 10px auto;
+  }
+
+  .inline-fields {
+    flex-direction: column;
+  }
+
+  .features-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .main-footer {
+    padding: 20px;
+    font-size: 16px;
+  }
+}
+
+/* Small mobile phones */
+@media (max-width: 480px) {
+  .navbar-brand {
+    font-size: 20px;
+  }
+
+  .nav-item a {
+    font-size: 16px;
+  }
+
+  .cart-count {
+    font-size: 12px;
+    padding: 1px 4px;
+  }
+
+  .feature {
+    font-size: 14px;
+  }
+
+  button, input {
+    font-size: 16px;
+  }
+
+  .contact-strip {
+    width: 100%;
+    font-size: 18px;
+    padding: 15px;
+  }
+
+  .main-footer {
+    font-size: 14px;
+  }
+}
+

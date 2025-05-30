@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+    <link href="cart.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image" href="image/logo.png" />
+    <title>Grocery at your Doorstep</title>
+</head>
+<body>
+    <header>Fresh and Organic Produce From our Farmers to your Kitchen</header>
+    
+        <div class="head">
+            <div class="logo">
+              <div><a href="index.html"><img src="image/logo.png"></a></div>
+              <div><form id="searchForm" target="_blank">
+                <input type="text" id="searchInput" placeholder="Search for products" />
+                <button type="submit">Search <img src="image/search icon.png"></button>
+              </form>
+            </div>                 
+                  <script>
+                    document.getElementById('searchForm').addEventListener('submit', function(e) {
+                      e.preventDefault();
+                      const query = document.getElementById('searchInput').value;
+                      const site = "yourwebsite.com";
+                      const searchUrl = `https://www.google.com/search?q=site:${site}+${encodeURIComponent(query)}`;
+                      window.open(searchUrl, '_blank');
+                    });
+                  </script>
+                  
+        </div>
+        <div>
+            <nav class="navbar">
+              <input type="checkbox" id="menu-toggle">
+              <label for="menu-toggle" class="menu-icon">&#9776;</label>
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a href="category.html">Categories</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="bestsale.html">Best Sales</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="blog.html">Blogs</a>
+                  </li>
+                </ul>
+                <div class="navbar-right">
+                  <a href="cart.html" class="cart-link">
+                    <i class="fas fa-shopping-cart"><img src="image/cart icon.png" width="50px"></i>
+                    <span class="cart-count">0</span>
+                  </a>
+                  <div class="login-dropdown">
+                    <a href="log.html" class="login-link">My Account</a>
+                    <div class="login-form">
+                      <!-- Login form elements -->
+                    </div>
+                  </div>
+                </div>
+              </nav>
+        </div>
+       
+
+        </div>
+       
+<div class="nav-steps">
+  <span class="active">BAG</span> &gt; <span>ADDRESS</span> &gt; <span>PAYMENT</span>
+</div>
+
+<div class="container">
+  <div class="cart-items" id="cart-items"></div>
+
+  <div class="summary-box">
+    <p><strong>Subtotal</strong> <span id="subtotal">₹ 0</span></p>
+    <p><strong>Delivery Charges</strong> <span>₹ 0</span></p>
+    <p><strong>Discount</strong> <span id="discount">- ₹ 0</span></p>
+    <p class="total"><strong>TOTAL</strong> <span id="total">₹ 0</span></p>
+    <button class="checkout-btn"><a href="address.html">CHECKOUT</a> </button>
+    <p class="secure"><span class="lock">🔒</span> 100% Secure Payments</p>
+  </div>
+</div>
+  
+
+<!-- Contact CTA -->
+<div class="contact-strip">
+  <div class="contact-box">
+    <strong>Get in Touch with us</strong><br>
+    <span>+91 91010 90000</span>
+  </div>
+  
+</div>
+
+
+<!-- Feature Icons Row -->
+<section class="features-row">
+  <div class="feature">
+  <img src="image/free shipping icon.png"><strong>Free Shipping</strong><br><small>For Orders Above 500</small>
+  </div>
+  <div class="feature">
+  <img src="image/fresh produce icon.png"><strong>Fresh Produce</strong><br><small>Guaranteed Product Warranty</small>
+  </div>
+  <div class="feature">
+  <img src="image/safety icon.png"> <strong>100% Safety & Security</strong><br><small>Your Data is Highly Secured</small>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="main-footer">
+  <div class="footer-col">
+    <h4><img src="image/logo.png"></h4>
+    <h3>Fresh groceries, particularly fruits, vegetables, whole grains, and lean proteins, play a crucial role in nourishing our bodies and promoting overall well-being</h3>
+  </div>
+  <div class="footer-col">
+    <h4>NAVIGATE</h4>
+    <ul>
+      <li><a href="privacy.html">Privacy Policy</a> </li>
+      <li><a href="terms.html">Terms & Conditions</a></li>
+      <li><a href="terms.html">How to Order</a></li>
+      <li><a href="about.html">About Us</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <h4>G-STORE</h4>
+    <p>Reg: T21542GST548</p>
+    <p>TIN: 14578452884</p>
+    <p>Email: groceries at doorstep@gmail.com</p>
+  </div>
+  <h3>Copyrights 2022 &copy;Groceries at Doorstep Ltd</h3>
+</footer>
+<script>
+  const cartCount = document.querySelector(".cart-count");
+
+function updateCartCount(count) {
+cartCount.textContent = count;
+}
+
+// Example: Incrementing the cart count (replace with your actual logic)
+function addItemToCart() {
+let currentCount = parseInt(cartCount.textContent);
+updateCartCount(currentCount + 1);
+}
+
+const cartData = [
+{
+category: "Vegetables",
+name: "LADY'S FINGER",
+price: 80,
+img: "image/cart image 1.png",
+quantity: 1
+},
+{
+category: "Vegetables",
+name: "CARROTS",
+price: 65,
+img: "image/cart image 2.png",
+quantity: 1
+},
+{
+category: "Snacks & Beverage",
+name: "CROISSANT",
+price: 140,
+img: "image/cart image 3.png",
+quantity: 1
+},
+{
+category: "Frozen Food",
+name: "PLUMS",
+price: 220,
+img: "image/cart image 4.png",
+quantity: 1
+},
+{
+category: "Diary & Eggs",
+name: "COUNTRY EGGS",
+price: 120,
+img: "image/cart image 5.png",
+quantity: 1
+}
+];
+
+
+const cartContainer = document.getElementById("cart-items");
+
+function renderCart() {
+cartContainer.innerHTML = "";
+cartData.forEach((item, index) => {
+const itemDiv = document.createElement("div");
+itemDiv.classList.add("cart-item");
+
+itemDiv.innerHTML = `
+<img src="${item.img}" alt="${item.name}">
+<div class="item-details">
+<p><strong>${item.category}</strong></p>
+<p>${item.name}</p>
+<p>₹ ${item.price}</p>
+</div>
+<div class="quantity-controls">
+<button onclick="updateQty(${index}, -1)">-</button>
+<span>${item.quantity}</span>
+<button onclick="updateQty(${index}, 1)">+</button>
+</div>
+`;
+cartContainer.appendChild(itemDiv);
+});
+
+updateSummary();
+}
+
+function updateQty(index, change) {
+cartData[index].quantity += change;
+if (cartData[index].quantity < 1) cartData[index].quantity = 1;
+renderCart();
+}
+
+function updateSummary() {
+let subtotal = 0;
+cartData.forEach(item => {
+subtotal += item.price * item.quantity;
+});
+
+const discount = subtotal > 1000 ? 220 : 0;
+const total = subtotal - discount;
+
+document.getElementById("subtotal").innerText = `₹ ${subtotal}`;
+document.getElementById("discount").innerText = `- ₹ ${discount}`;
+document.getElementById("total").innerText = `₹ ${total}`;
+}
+
+renderCart();
+
+</script> 
+</body>
+</html>

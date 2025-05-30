@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+    <link href="about.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image" href="image/logo.png" />
+    <title>Grocery at your Doorstep</title>
+</head>
+<body>
+    <header>Fresh and Organic Produce From our Farmers to your Kitchen</header>
+    
+        <div class="head">
+            <div class="logo">
+              <div><a href="index.html"><img src="image/logo.png"></a></div>
+              <div><form id="searchForm" target="_blank">
+                <input type="text" id="searchInput" placeholder="Search for products" />
+                <button type="submit">Search <img src="image/search icon.png"></button>
+              </form>
+            </div>                 
+                  <script>
+                    document.getElementById('searchForm').addEventListener('submit', function(e) {
+                      e.preventDefault();
+                      const query = document.getElementById('searchInput').value;
+                      const site = "yourwebsite.com";
+                      const searchUrl = `https://www.google.com/search?q=site:${site}+${encodeURIComponent(query)}`;
+                      window.open(searchUrl, '_blank');
+                    });
+                  </script>
+                  
+        </div>
+        <div>
+            <nav class="navbar">
+              <input type="checkbox" id="menu-toggle">
+              <label for="menu-toggle" class="menu-icon">&#9776;</label>
+                
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a href="category.html">Categories</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="bestsale.html">Best Sales</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="blog.html">Blogs</a>
+                  </li>
+                </ul>
+                <div class="navbar-right">
+                  <a href="cart.html" class="cart-link">
+                    <i class="fas fa-shopping-cart"><a href="cart.html"><img src="image/cart icon.png" width="50px"></a></i>
+                    <span class="cart-count">0</span>
+                  </a>
+                  <div class="login-dropdown">
+                    <a href="log.html" class="login-link">My Account</a>
+                    <div class="login-form">
+                      <!-- Login form elements -->
+                    </div>
+                  </div>
+                </div>
+              </nav>
+        </div>
+       
+
+        </div>
+        <script>
+            const cartCount = document.querySelector(".cart-count");
+
+function updateCartCount(count) {
+  cartCount.textContent = count;
+}
+
+// Example: Incrementing the cart count (replace with your actual logic)
+function addItemToCart() {
+  let currentCount = parseInt(cartCount.textContent);
+  updateCartCount(currentCount + 1);
+}
+</script> 
+<div class="container">
+  <h1>GROCERY AT DOORSTEP</h1>
+  <p class="subtitle">3 Years of Iconic Grocery at doorstep sale, Ethnic & Modern Pots collections and Bonsai Trees.</p>
+
+  <section class="section">
+    <h2>BIGGER. BETTER. BRANDS.</h2>
+    <p>
+      Sonee Sports is an inspirational portfolio of well-diversified iconic sports, lifestyle and fashion brands presented through unrivaled creativity and innovation.
+      At Sonee Sports we deliver branded products, exceptional service, unparalleled customer support and operational excellence to create highest value to our customers,
+      employees and suppliers. Through a thorough integration of our human resource, state of the art ERP system and E-commerce platform,
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>Mission</h2>
+    <p>
+      Our mission is to improve the performance and lives of sports and physical fitness participants in Maldives.
+      We do that by presenting world leading brands, integrated with exceptional service, unparalleled support, and operational excellence to facilitate sports and play.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>Vision</h2>
+    <p>
+      We envision a future where Maldives embraces healthy living as part of our culture <strong>Bigger Better Brands</strong>
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>Health</h2>
+    <p>
+      Sonee Sports will invest in promoting healthy lifestyles through play and sport because healthy people contribute to improving the society
+      by channelling the physical and mental energy generated from sports to action, creativity, and innovation.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>Social Change</h2>
+    <p>
+      We will invest in the power of sports to bring social change. Sports provide a powerful platform to advance social change.
+      Our purpose of transforming the Maldivian Society can only be achieved through inclusivity of all members of the society and
+      the sustainability of the environment in which we live.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>Joy</h2>
+    <p>
+      Sonee Sports will invest in enhancing the lives of a healthy nation by helping people experience the joy of celebrating life.
+      We will redefine social gatherings and healthy eating 2030 Initiatives & Goals
+    </p>
+  </section>
+</div>
+  
+
+<!-- Contact CTA -->
+<div class="contact-strip">
+  <div class="contact-box">
+    <strong>Get in Touch with us</strong><br>
+    <span>+91 91010 90000</span>
+  </div>
+  
+</div>
+
+
+<!-- Feature Icons Row -->
+<section class="features-row">
+  <div class="feature">
+  <img src="image/free shipping icon.png"><strong>Free Shipping</strong><br><small>For Orders Above 500</small>
+  </div>
+  <div class="feature">
+  <img src="image/fresh produce icon.png"><strong>Fresh Produce</strong><br><small>Guaranteed Product Warranty</small>
+  </div>
+  <div class="feature">
+  <img src="image/safety icon.png"> <strong>100% Safety & Security</strong><br><small>Your Data is Highly Secured</small>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="main-footer">
+  <div class="footer-col">
+    <h4><img src="image/logo.png"></h4>
+    <h3>Fresh groceries, particularly fruits, vegetables, whole grains, and lean proteins, play a crucial role in nourishing our bodies and promoting overall well-being</h3>
+  </div>
+  <div class="footer-col">
+    <h4>NAVIGATE</h4>
+    <ul>
+      <li><a href="privacy.html">Privacy Policy</a> </li>
+      <li><a href="terms.html">Terms & Conditions</a></li>
+      <li><a href="terms.html">How to Order</a></li>
+      <li><a href="about.html">About Us</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <h4>G-STORE</h4>
+    <p>Reg: T21542GST548</p>
+    <p>TIN: 14578452884</p>
+    <p>Email: groceries at doorstep@gmail.com</p>
+  </div>
+  <h3>Copyrights 2022 &copy;Groceries at Doorstep Ltd</h3>
+</footer>
+
+</body>
+</html>

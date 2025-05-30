@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+    <link href="payment.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image" href="image/logo.png" />
+    <title>Grocery at your Doorstep</title>
+</head>
+<body>
+    <header>Fresh and Organic Produce From our Farmers to your Kitchen</header>
+    
+        <div class="head">
+            <div class="logo">
+              <div><a href="index.html"><img src="image/logo.png"></a></div>
+              <div><form id="searchForm" target="_blank">
+                <input type="text" id="searchInput" placeholder="Search for products" />
+                <button type="submit">Search <img src="image/search icon.png"></button>
+              </form>
+            </div>                 
+                  <script>
+                    document.getElementById('searchForm').addEventListener('submit', function(e) {
+                      e.preventDefault();
+                      const query = document.getElementById('searchInput').value;
+                      const site = "yourwebsite.com";
+                      const searchUrl = `https://www.google.com/search?q=site:${site}+${encodeURIComponent(query)}`;
+                      window.open(searchUrl, '_blank');
+                    });
+                  </script>
+                  
+        </div>
+        <div>
+            <nav class="navbar">
+              <input type="checkbox" id="menu-toggle">
+              <label for="menu-toggle" class="menu-icon">&#9776;</label>
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a href="category.html">Categories</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="bestsale.html">Best Sales</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="blog.html">Blogs</a>
+                  </li>
+                </ul>
+                <div class="navbar-right">
+                  <a href="cart.html" class="cart-link">
+                    <i class="fas fa-shopping-cart"><a href="cart.html"><img src="image/cart icon.png" width="50px"></a></i>
+                    <span class="cart-count">0</span>
+                  </a>
+                  <div class="login-dropdown">
+                    <a href="log.html" class="login-link">My Account</a>
+                    <div class="login-form">
+                      <!-- Login form elements -->
+                    </div>
+                  </div>
+                </div>
+              </nav>
+        </div>
+       
+
+        </div>
+        <script>
+            const cartCount = document.querySelector(".cart-count");
+
+function updateCartCount(count) {
+  cartCount.textContent = count;
+}
+
+// Example: Incrementing the cart count (replace with your actual logic)
+function addItemToCart() {
+  let currentCount = parseInt(cartCount.textContent);
+  updateCartCount(currentCount + 1);
+}
+function submitPayment() {
+  const cardNumber = document.getElementById('cardNumber').value.trim();
+  const cvv = document.getElementById('cvv').value.trim();
+  const expiry = document.getElementById('expiry').value.trim();
+  const cardName = document.getElementById('cardName').value.trim();
+
+  if (!cardNumber || !cvv || !expiry || !cardName) {
+    alert('Please fill in all fields.');
+    return;
+  }
+
+  if (!/^\d{4} \d{4} \d{4} \d{4}$/.test(cardNumber)) {
+    alert('Enter card number in correct format (e.g. 1234 5678 9012 3456)');
+    return;
+  }
+
+  if (!/^\d{3}$/.test(cvv)) {
+    alert('Enter valid 3-digit CVV');
+    return;
+  }
+
+  if (!/^\d{2}\/\d{2}$/.test(expiry)) {
+    alert('Enter expiry date in MM/YY format');
+    return;
+  }
+
+  alert('Payment submitted successfully!');
+  // Optional: Redirect to success page or clear form
+}
+
+</script> 
+<div class="container">
+  <h1>Cart</h1>
+  <div class="steps">
+    <span class="active">BAG</span> &gt;
+    <span class="active">ADDRESS</span> &gt;
+    <span class="active">PAYMENT</span>
+  </div>
+
+  <div class="payment-section">
+    <form id="paymentForm" class="card-form">
+      <h2><input type="radio" checked> Credit Card</h2>
+      <p class="desc">Save money transfer using bank account<br>Visa, Mastero</p>
+      <div class="card-icons">
+        <img src="https://img.icons8.com/color/48/mastercard-logo.png" alt="MasterCard">
+        <img src="https://img.icons8.com/color/48/visa.png" alt="Visa">
+      </div>
+
+      <label>CREDIT CARD NUMBER</label>
+      <input type="text" id="cardNumber" placeholder="1234 5487 5241 9853" maxlength="19" required>
+
+      <div class="inline-fields">
+        <div>
+          <label>CVV CODE</label>
+          <input type="text" id="cvv" placeholder="121" maxlength="3" required>
+        </div>
+        <div>
+          <label>EXPIRY DATE</label>
+          <input type="text" id="expiry" placeholder="MM/YY" maxlength="5" required>
+        </div>
+      </div>
+
+      <label>NAME ON CARD</label>
+      <input type="text" id="cardName" placeholder="Enter your name on the card" required>
+    </form>
+
+    <div class="summary">
+      <p><strong>Subtotal</strong> <span>₹ 4580</span></p>
+      <p><strong>Delivery Charges</strong> <span>₹ 0</span></p>
+      <p><strong>Discount</strong> <span>- ₹ 220</span></p>
+      <hr>
+      <p><strong>TOTAL</strong> <span>₹ 4360</span></p>
+      <button onclick="submitPayment()"><a href="success.html">PROCEED TO PAY</a></button>
+      <div class="secure">
+        🔒 100% Secure Payments
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+<!-- Contact CTA -->
+<div class="contact-strip">
+  <div class="contact-box">
+    <strong>Get in Touch with us</strong><br>
+    <span>+91 91010 90000</span>
+  </div>
+  
+</div>
+
+
+<!-- Feature Icons Row -->
+<section class="features-row">
+  <div class="feature">
+  <img src="image/free shipping icon.png"><strong>Free Shipping</strong><br><small>For Orders Above 500</small>
+  </div>
+  <div class="feature">
+  <img src="image/fresh produce icon.png"><strong>Fresh Produce</strong><br><small>Guaranteed Product Warranty</small>
+  </div>
+  <div class="feature">
+  <img src="image/safety icon.png"> <strong>100% Safety & Security</strong><br><small>Your Data is Highly Secured</small>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="main-footer">
+  <div class="footer-col">
+    <h4><img src="image/logo.png"></h4>
+    <h3>Fresh groceries, particularly fruits, vegetables, whole grains, and lean proteins, play a crucial role in nourishing our bodies and promoting overall well-being</h3>
+  </div>
+  <div class="footer-col">
+    <h4>NAVIGATE</h4>
+    <ul>
+      <li><a href="privacy.html">Privacy Policy</a> </li>
+      <li><a href="terms.html">Terms & Conditions</a></li>
+      <li><a href="terms.html">How to Order</a></li>
+      <li><a href="about.html">About Us</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <h4>G-STORE</h4>
+    <p>Reg: T21542GST548</p>
+    <p>TIN: 14578452884</p>
+    <p>Email: groceries at doorstep@gmail.com</p>
+  </div>
+  <h3>Copyrights 2022 &copy;Groceries at Doorstep Ltd</h3>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+    <link href="blog.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image" href="image/logo.png" />
+    <title>Grocery at your Doorstep</title>
+</head>
+<body>
+    <header>Fresh and Organic Produce From our Farmers to your Kitchen</header>
+    
+        <div class="head">
+            <div class="logo">
+              <div><a href="index.html"><img src="image/logo.png"></a></div>
+              <div><form id="searchForm" target="_blank">
+                <input type="text" id="searchInput" placeholder="Search for products" />
+                <button type="submit">Search <img src="image/search icon.png"></button>
+              </form>
+            </div>                 
+                  <script>
+                    document.getElementById('searchForm').addEventListener('submit', function(e) {
+                      e.preventDefault();
+                      const query = document.getElementById('searchInput').value;
+                      const site = "yourwebsite.com";
+                      const searchUrl = `https://www.google.com/search?q=site:${site}+${encodeURIComponent(query)}`;
+                      window.open(searchUrl, '_blank');
+                    });
+                  </script>
+                  
+        </div>
+        <div>
+            <nav class="navbar">
+              <input type="checkbox" id="menu-toggle">
+              <label for="menu-toggle" class="menu-icon">&#9776;</label>
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a href="category.html">Categories</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="bestsale.html">Best Sales</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="blog.html">Blogs</a>
+                  </li>
+                </ul>
+                <div class="navbar-right">
+                  <a href="cart.html" class="cart-link">
+                    <i class="fas fa-shopping-cart"><a href="cart.html"><img src="image/cart icon.png" width="50px"></a></i>
+                    <span class="cart-count">0</span>
+                  </a>
+                  <div class="login-dropdown">
+                    <a href="log.html" class="login-link">My Account</a>
+                    <div class="login-form">
+                      <!-- Login form elements -->
+                    </div>
+                  </div>
+                </div>
+              </nav>
+        </div>
+       
+
+        </div>
+        <script>
+            const cartCount = document.querySelector(".cart-count");
+
+function updateCartCount(count) {
+  cartCount.textContent = count;
+}
+
+// Example: Incrementing the cart count (replace with your actual logic)
+function addItemToCart() {
+  let currentCount = parseInt(cartCount.textContent);
+  updateCartCount(currentCount + 1);
+}
+</script> 
+
+<div class="container">
+  <div class="main-article">
+    <div class="image-featured">
+      <span class="badge">FEATURED ARTICLE</span>
+      <img src="image/blog read more 1.png" alt="Eco-Friendly Shopping">
+    </div>
+    <div class="article-text">
+      <p class="date">08/04/2025</p>
+      <h2>Eco-Friendly Shopping Tips</h2>
+      <p class="excerpt" style="font-size: 20px;">
+        “Welcome to our Plant Care section, where we share expert advice and practical tips to help you have your trees, and plants healthy and thriving...”
+      </p>
+      <br>
+      <div class="quick-links">
+        <h3>Quick Prefix in this Article:</h3>
+        <br>
+        <ol>
+          <li>What are Indoor Plants?</li>
+          <li>How do you plant indoor plants?</li>
+          <li>How much light do indoor plants need?</li>
+          <li>What qualities make for a good indoor plant?</li>
+          <li>Which indoor plants are easy to take care of?</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  
+
+  <div class="sub-articles">
+    <div class="card">
+      <img src="image/blog 1.png" alt="Budget Grocery">
+      <p class="date">08/04/2025</p>
+      <h4>Budget-Friendly Grocery</h4>
+      <p>“Welcome to our Plant Care section, where we share expert advice...”</p>
+      <button class="read-btn">Read Now</button>
+    </div>
+
+    <div class="card">
+      <img src="image/blog 2.png" alt="Meal planning">
+      <p class="date">22/03/2025</p>
+      <h4>Meal planning for the week</h4>
+      <p>“Welcome to our Plant Care section, where we share expert advice...”</p>
+      <button class="read-btn">Read Now</button>
+    </div>
+
+    <div class="card">
+      <img src="image/blog 3.png" alt="Healthy grocery swaps">
+      <p class="date">15/03/2025</p>
+      <h4>Healthy grocery swaps</h4>
+      <p>“Welcome to our Plant Care section, where we share expert advice...”</p>
+      <button class="read-btn">Read Now</button>
+    </div>
+
+    <div class="card">
+      <img src="image/blog 4.png" alt="Budget Grocery">
+      <p class="date">08/04/2025</p>
+      <h4>Budget-Friendly Grocery</h4>
+      <p>“Welcome to our Plant Care section, where we share expert advice...”</p>
+      <button class="read-btn">Read Now</button>
+    </div>
+
+    <div class="card">
+      <img src="image/blog 5.png" alt="Meal planning">
+      <p class="date">22/03/2025</p>
+      <h4>Meal planning for the week</h4>
+      <p>“Welcome to our Plant Care section, where we share expert advice...”</p>
+      <button class="read-btn">Read Now</button>
+    </div>
+
+    <div class="card">
+      <img src="image/blog 6.png" alt="Healthy grocery swaps">
+      <p class="date">15/03/2025</p>
+      <h4>Healthy grocery swaps</h4>
+      <p>“Welcome to our Plant Care section, where we share expert advice...”</p>
+      <button class="read-btn">Read Now</button>
+    </div>
+  </div>
+</div>
+  
+
+<!-- Contact CTA -->
+<div class="contact-strip">
+  <div class="contact-box">
+    <strong>Get in Touch with us</strong><br>
+    <span>+91 91010 90000</span>
+  </div>
+  
+</div>
+
+
+<!-- Feature Icons Row -->
+<section class="features-row">
+  <div class="feature">
+  <img src="image/free shipping icon.png"><strong>Free Shipping</strong><br><small>For Orders Above 500</small>
+  </div>
+  <div class="feature">
+  <img src="image/fresh produce icon.png"><strong>Fresh Produce</strong><br><small>Guaranteed Product Warranty</small>
+  </div>
+  <div class="feature">
+  <img src="image/safety icon.png"> <strong>100% Safety & Security</strong><br><small>Your Data is Highly Secured</small>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="main-footer">
+  <div class="footer-col">
+    <h4><img src="image/logo.png"></h4>
+    <h3>Fresh groceries, particularly fruits, vegetables, whole grains, and lean proteins, play a crucial role in nourishing our bodies and promoting overall well-being</h3>
+  </div>
+  <div class="footer-col">
+    <h4>NAVIGATE</h4>
+    <ul>
+      <li><a href="privacy.html">Privacy Policy</a> </li>
+      <li><a href="terms.html">Terms & Conditions</a></li>
+      <li><a href="terms.html">How to Order</a></li>
+      <li><a href="about.html">About Us</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <h4>G-STORE</h4>
+    <p>Reg: T21542GST548</p>
+    <p>TIN: 14578452884</p>
+    <p>Email: groceries at doorstep@gmail.com</p>
+  </div>
+  <h3>Copyrights 2022 &copy;Groceries at Doorstep Ltd</h3>
+</footer>
+
+</body>
+</html>

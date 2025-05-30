@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+  <link href="veg.css" rel="stylesheet" />
+  <link rel="shortcut icon" href="image/logo.png" type="image/png" />
+  <title>Grocery at your Doorstep</title>
+</head>
+<body>
+  <header>Fresh and Organic Produce From our Farmers to your Kitchen</header>
+
+  <div class="head">
+    <div class="logo">
+      <div><a href="index.html"><img src="image/logo.png" alt="Logo" /></a></div>
+      <div>
+        <form id="searchForm" target="_blank">
+          <input type="text" id="searchInput" placeholder="Search for products" />
+          <button type="submit">Search <img src="image/search icon.png" alt="search" /></button>
+        </form>
+      </div>
+    </div>
+
+    <nav class="navbar">
+      <input type="checkbox" id="menu-toggle">
+              <label for="menu-toggle" class="menu-icon">&#9776;</label>
+      <ul class="navbar-nav">
+        <li class="nav-item"><a href="category.html">Categories</a></li>
+        <li class="nav-item"><a href="bestsale.html">Best Sales</a></li>
+        <li class="nav-item"><a href="blog.html">Blogs</a></li>
+      </ul>
+      <div class="navbar-right">
+        <a href="cart.html" class="cart-link">
+          <i class="fas fa-shopping-cart"><a href="cart.html"><img src="image/cart icon.png" width="50px"></a></i>
+          <span class="cart-count">0</span>
+        </a>
+        <div class="login-dropdown">
+          <a href="log.html" class="login-link">My Account</a>
+          <div class="login-form">
+            <!-- Login form elements -->
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <h1 style="text-align: center;"><u style="color:green;">Pantry and Staples</u></h1>
+
+  <div class="controls">
+    <div class="filter">
+      <h2>Filter</h2>
+      <label for="priceRange">Sort by Price</label>
+      <input type="range" id="priceRange" min="0" max="200" value="100" />
+      <span id="priceValue">₹100</span>
+    </div>
+
+    <div class="sort">
+      <label for="sortSelect"><strong>Sort by:</strong></label>
+      <select id="sortSelect">
+        <option value="featured">Featured</option>
+        <option value="asc">Price: Low to High</option>
+        <option value="desc">Price: High to Low</option>
+      </select>
+    </div>
+  </div>
+
+  <div id="products" class="products"></div>
+
+  <div class="cart">
+    🛒 Cart Items: <span id="cartCount">0</span>
+  </div>
+
+  <div class="contact-strip">
+    <div class="contact-box">
+      <strong>Get in Touch with us</strong><br />
+      <span>+91 91010 90000</span>
+    </div>
+  </div>
+
+  <section class="features-row">
+    <div class="feature">
+      <img src="image/free shipping icon.png" alt="Shipping" /><strong>Free Shipping</strong><br />
+      <small>For Orders Above 500</small>
+    </div>
+    <div class="feature">
+      <img src="image/fresh produce icon.png" alt="Produce" /><strong>Fresh Produce</strong><br />
+      <small>Guaranteed Product Warranty</small>
+    </div>
+    <div class="feature">
+      <img src="image/safety icon.png" alt="Safety" /><strong>100% Safety & Security</strong><br />
+      <small>Your Data is Highly Secured</small>
+    </div>
+  </section>
+
+  <footer class="main-footer">
+    <div class="footer-col">
+      <h4><img src="image/logo.png" alt="Logo" /></h4>
+      <h3>
+        Fresh groceries, particularly fruits, vegetables, whole grains, and lean proteins, play a crucial role in nourishing our bodies and promoting overall well-being
+      </h3>
+    </div>
+    <div class="footer-col">
+      <h4>NAVIGATE</h4>
+      <ul>
+        <li><a href="privacy.html">Privacy Policy</a> </li>
+        <li><a href="terms.html">Terms & Conditions</a></li>
+        <li><a href="terms.html">How to Order</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>G-STORE</h4>
+      <p>Reg: T21542GST548</p>
+      <p>TIN: 14578452884</p>
+      <p>Email: groceries at doorstep@gmail.com</p>
+    </div>
+    <h3>&copy; 2022 Groceries at Doorstep Ltd</h3>
+  </footer>
+
+  <script>
+    document.getElementById('searchForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const query = document.getElementById('searchInput').value;
+      const site = "yourwebsite.com";
+      const searchUrl = `https://www.google.com/search?q=site:${site}+${encodeURIComponent(query)}`;
+      window.open(searchUrl, '_blank');
+    });
+
+    const products = [
+      { id: 1, name: 'Fresh Sugar', price: 80, image: 'image/pantry cate 1.png' },
+      { id: 2, name: 'Fresh Dhall', price: 60, image: 'image/pantry cate 2.png' },
+      { id: 3, name: 'Fresh Corn', price: 100, image: 'image/pantry cate 3.png' },
+      { id: 4, name: 'Fresh Cereals', price: 40, image: 'image/pantry cate 4.png' },
+      { id: 5, name: 'Fresh Spices', price: 90, image: 'image/pantry cate 5.png' },
+      { id: 6, name: 'Fresh Drygrapes', price: 30, image: 'image/pantry cate 6.png' },
+      { id: 7, name: 'Fresh Plum', price: 50, image: 'image/pantry cate 7.png' },
+      { id: 8, name: 'Fresh Turmeric', price: 70, image: 'image/pantry cate 8.png' }
+    ];
+
+    let cartCount = 0;
+
+    function updateCartDisplay() {
+      document.getElementById('cartCount').textContent = cartCount;
+      document.querySelector('.cart-count').textContent = cartCount;
+    }
+
+    function handleAddToCart() {
+      cartCount++;
+      updateCartDisplay();
+    }
+
+    function displayProducts(items) {
+      const container = document.getElementById('products');
+      container.innerHTML = '';
+      items.forEach(product => {
+        container.innerHTML += `
+          <div class="product" data-price="${product.price}">
+            <img src="${product.image}" alt="${product.name}">
+            <h3>${product.name}</h3>
+            <p>₹${product.price}</p>
+            <button onclick="handleAddToCart()">Add to cart</button>
+          </div>
+        `;
+      });
+    }
+
+    document.getElementById('priceRange').addEventListener('input', function () {
+      const maxPrice = this.value;
+      document.getElementById('priceValue').textContent = `₹${maxPrice}`;
+      const filtered = products.filter(p => p.price <= maxPrice);
+      displayProducts(filtered);
+    });
+
+    document.getElementById('sortSelect').addEventListener('change', function () {
+      const type = this.value;
+      let sorted = [...products];
+      if (type === 'asc') {
+        sorted.sort((a, b) => a.price - b.price);
+      } else if (type === 'desc') {
+        sorted.sort((a, b) => b.price - a.price);
+      }
+      displayProducts(sorted);
+    });
+
+    displayProducts(products);
+  </script>
+</body>
+</html>

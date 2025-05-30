@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+    <link href="vegdes.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image" href="image/logo.png" />
+    <title>Grocery at your Doorstep</title>
+</head>
+<body>
+    <header>Fresh and Organic Produce From our Farmers to your Kitchen</header>
+    
+        <div class="head">
+            <div class="logo">
+              <div><a href="index.html"><img src="image/logo.png"></a></div>
+              <div><form id="searchForm" target="_blank">
+                <input type="text" id="searchInput" placeholder="Search for products" />
+                <button type="submit">Search <img src="image/search icon.png"></button>
+              </form>
+            </div>                 
+                  <script>
+                    document.getElementById('searchForm').addEventListener('submit', function(e) {
+                      e.preventDefault();
+                      const query = document.getElementById('searchInput').value;
+                      const site = "yourwebsite.com";
+                      const searchUrl = `https://www.google.com/search?q=site:${site}+${encodeURIComponent(query)}`;
+                      window.open(searchUrl, '_blank');
+                    });
+                  </script>
+                  
+        </div>
+        <div>
+            <nav class="navbar">
+              <input type="checkbox" id="menu-toggle">
+              <label for="menu-toggle" class="menu-icon">&#9776;</label>
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a href="category.html">Categories</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="bestsale.html">Best Sales</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="blog.html">Blogs</a>
+                  </li>
+                </ul>
+                <div class="navbar-right">
+                  <a href="cart.html" class="cart-link">
+                    <i class="fas fa-shopping-cart"><a href="cart.html"><img src="image/cart icon.png" width="50px"></a></i>
+                    <span class="cart-count">0</span>
+                  </a>
+                  <div class="login-dropdown">
+                    <a href="log.html" class="login-link">My Account</a>
+                    <div class="login-form">
+                      <!-- Login form elements -->
+                    </div>
+                  </div>
+                </div>
+              </nav>
+        </div>
+       
+
+        </div>
+        <script>
+            const cartCount = document.querySelector(".cart-count");
+
+function updateCartCount(count) {
+  cartCount.textContent = count;
+}
+
+// Example: Incrementing the cart count (replace with your actual logic)
+function addItemToCart() {
+  let currentCount = parseInt(cartCount.textContent);
+  updateCartCount(currentCount + 1);
+}
+let quantity = 1;
+
+function increaseQty() {
+  quantity++;
+  document.getElementById('qty').textContent = quantity;
+}
+
+function decreaseQty() {
+  if (quantity > 1) {
+    quantity--;
+    document.getElementById('qty').textContent = quantity;
+  }
+}
+
+function selectWeight(selected) {
+  const checkboxes = document.querySelectorAll('input[name="weight"]');
+  checkboxes.forEach(cb => cb.checked = false);
+  selected.checked = true;
+  document.getElementById('selected-weight').textContent = selected.value;
+}
+
+function changeImage(src) {
+  document.getElementById('main-image').src = src;
+}
+
+</script> 
+
+<div class="product-container">
+  <div class="image-section">
+    <img id="main-image" src="image/vege cate.png" alt="Radish" class="main-image">
+    <div class="thumbnail-row">
+      <img src="image/veg des 1.png" class="thumb" onclick="changeImage(this.src)">
+      <img src="image/veg des 2.png" class="thumb" onclick="changeImage(this.src)">
+      <img src="image/veg des 3.png" class="thumb" onclick="changeImage(this.src)">
+    </div>
+  </div>
+  
+  <div class="info-section">
+    <h2>Radish</h2>
+    <p>Each of our products are hand-selected from the local farmers and helps you improve good health</p>
+    <h3>₹ 120</h3>
+    <p><strong>TAX INCLUDED</strong> | <strong>SHIPPING CALCULATED AT CHECKOUT</strong></p>
+
+    <div class="quantity-control">
+      <button onclick="decreaseQty()">-</button>
+      <span id="qty">1</span>
+      <button onclick="increaseQty()">+</button>
+    </div>
+
+    <div class="weight-options">
+      <p>Quantity: <span id="selected-weight">250g</span></p>
+      <label><input type="checkbox" name="weight" value="250g" checked onclick="selectWeight(this)"> 250g</label>
+      <label><input type="checkbox" name="weight" value="500g" onclick="selectWeight(this)"> 500g</label>
+      <label><input type="checkbox" name="weight" value="1kg" onclick="selectWeight(this)"> 1kg</label>
+    </div>
+
+    <button class="add-to-cart">Add to Cart</button>
+
+    <div class="shipping-info">
+      <p>🚚 Free shipping on all orders over 450 rupees</p>
+      <p>🕒 Delivery in 3-4 working days shipping & return</p>
+      <a href="#">Free delivery and return policies</a>
+    </div>
+  </div>
+</div>
+<div class="description-container">
+  <h1>Description</h1>
+  <p>
+    Strawberries are often described as sweet, juicy, and bright red berries with a fragrant, fruity aroma. They are typically sold fresh in containers or boxes and are a popular addition to various recipes and snacks.
+  </p>
+  <p>
+    Here's a more detailed look at how strawberries might be described in a grocery store setting:
+  </p>
+
+  <div class="section">
+    <h2>Appearance:</h2>
+    <ul>
+      <li><strong>Color:</strong> Bright red, with variations depending on the variety.</li>
+      <li><strong>Shape:</strong> Typically round or oval, with a smooth surface.</li>
+      <li><strong>Seeds:</strong> The seeds are small, whitish or brownish specks that cover the surface of the fruit.</li>
+      <li><strong>Freshness:</strong> Shiny, firm, and free from blemishes or mold.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Taste and Aroma:</h2>
+    <ul>
+      <li><strong>Flavor:</strong> Sweet and juicy, with a slightly tart or sour note in some varieties.</li>
+      <li><strong>Aroma:</strong> A pleasant, fruity, and fragrant aroma.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Nutrition:</h2>
+    <ul>
+      <li><strong>Vitamin C:</strong> Rich in vitamin C, an important antioxidant.</li>
+      <li><strong>Fiber:</strong> A good source of fiber.</li>
+      <li><strong>Other nutrients:</strong> Contains other vitamins, minerals, and antioxidants.</li>
+      <li><strong>Low in calories:</strong> A healthy and low-calorie fruit.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Uses:</h2>
+    <ul>
+      <li><strong>Fresh consumption:</strong> Enjoyed as a snack or added to salads, desserts, or smoothies.</li>
+      <li><strong>Culinary applications:</strong> Used in jams, sauces, desserts, and other dishes.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Storage:</h2>
+    <ul>
+      <li><strong>Refrigeration:</strong> Should be refrigerated to maintain freshness.</li>
+      <li><strong>Humidity:</strong> Best stored in the refrigerator at high humidity.</li>
+    </ul>
+  </div>
+</div>
+
+  
+
+<!-- Contact CTA -->
+<div class="contact-strip">
+  <div class="contact-box">
+    <strong>Get in Touch with us</strong><br>
+    <span>+91 91010 90000</span>
+  </div>
+  
+</div>
+
+
+<!-- Feature Icons Row -->
+<section class="features-row">
+  <div class="feature">
+  <img src="image/free shipping icon.png"><strong>Free Shipping</strong><br><small>For Orders Above 500</small>
+  </div>
+  <div class="feature">
+  <img src="image/fresh produce icon.png"><strong>Fresh Produce</strong><br><small>Guaranteed Product Warranty</small>
+  </div>
+  <div class="feature">
+  <img src="image/safety icon.png"> <strong>100% Safety & Security</strong><br><small>Your Data is Highly Secured</small>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="main-footer">
+  <div class="footer-col">
+    <h4><img src="image/logo.png"></h4>
+    <h3>Fresh groceries, particularly fruits, vegetables, whole grains, and lean proteins, play a crucial role in nourishing our bodies and promoting overall well-being</h3>
+  </div>
+  <div class="footer-col">
+    <h4>NAVIGATE</h4>
+    <ul>
+      <li><a href="privacy.html">Privacy Policy</a> </li>
+      <li><a href="terms.html">Terms & Conditions</a></li>
+      <li><a href="terms.html">How to Order</a></li>
+      <li><a href="about.html">About Us</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <h4>G-STORE</h4>
+    <p>Reg: T21542GST548</p>
+    <p>TIN: 14578452884</p>
+    <p>Email: groceries at doorstep@gmail.com</p>
+  </div>
+  <h3>Copyrights 2022 &copy;Groceries at Doorstep Ltd</h3>
+</footer>
+
+</body>
+</html>
