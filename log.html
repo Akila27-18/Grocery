@@ -20,6 +20,12 @@
               </form>
             </div>                 
                   <script>
+                      const hamburgers = document.querySelector('.hamburger');
+const navbar = document.querySelector('.navbar');
+
+hamburger.addEventListener('click', () => {
+  navbar.classList.toggle('active');
+});
                     document.getElementById('searchForm').addEventListener('submit', function(e) {
                       e.preventDefault();
                       const query = document.getElementById('searchInput').value;
@@ -32,8 +38,7 @@
         </div>
         <div>
             <nav class="navbar">
-              <input type="checkbox" id="menu-toggle">
-              <label for="menu-toggle" class="menu-icon">&#9776;</label>
+              <div class="hamburgers">&#9776;</div>
                 <ul class="navbar-nav">
                   <li class="nav-item">
                     <a href="category.html">Categories</a>

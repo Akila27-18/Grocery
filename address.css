@@ -1,5 +1,223 @@
 /* Base styles already apply to desktops */
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans';
+  
+}
+body{
+background-color: #fffafa;
+}
+header{
+  background-color: #4EB528;
+  color: white;
+  font-size: 25px;
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+.hamburgers{
+display:none ;
+}
+.head{
+  margin: 10px;
+  width: 100%;
+  height: 250px;
+  border: 4px solid whitesmoke;
+  
+}
+.logo{
+  display: flex;
+  flex-direction: row;
+  margin: 100px;
+  padding-left: 50px;
+  padding-top: 30px;
+  gap: 400px;
+}
+#searchForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
+}
+
+#searchInput {
+  font-size: large;
+  padding: 10px;
+  width: 350px;
+  border: 3px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 15px;
+  margin-left: 8px;
+  background-color: #FF7C08;
+  font-size: 20px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.navbar {
+  padding-left: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+  font-weight: bolder;
+  font-size: 35px;
+  position: fixed;
+  top: 50px;
+  background-color: white;
+  z-index: 1000;
+ /* height: 100px; */
+   width: 100%;     
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
+.navbar-nav {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+}
+
+.nav-item a {
+  color: black;
+  text-decoration: none;
+}
+
+.navbar-right {
+  top: 0;
+  padding-right: 700px;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.cart-link {
+  position: relative;
+  color: white;
+  text-decoration: none;
+}
+
+.cart-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: #4EB528;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 4px;
+  font-size: 20px;
+}
+
+.login-dropdown {
+  position: relative;
+}
+.login-dropdown a{
+  text-decoration: none;
+  color: white;
+  background-color: #4EB528;
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.login-form {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #ccc;
+  z-index: 1;
+}
+
+.login-dropdown:hover .login-form {
+  display: block;
+}
+
+
+.contact-strip {
+background: orange;
+width: 300px;
+color: white;
+padding: 20px;
+font-size: 20px;
+font-weight: bold;
+position: relative;
+}
+.contact-strip::after {
+content: "";
+position: absolute;
+right: 0;
+top: 0;
+border-left: 40px solid #001a33;
+border-top: 40px solid transparent;
+border-bottom: 40px solid transparent;
+height: 0;
+width: 0;
+}
+button a {
+text-decoration: none;
+color: white;
+}
+
+.features-row {
+position:relative;
+display: flex;
+justify-content: space-around;
+padding: 20px 10%;
+background: #f4f6f5;
+text-align: center;
+}
+.feature {
+width: 30%;
+font-size: 16px;
+}
+.feature strong {
+display: block;
+margin-top: 5px;
+}
+
+.main-footer {
+display: flex;
+justify-content: space-evenly;
+margin: 20px;
+gap: 20px;
+padding: 40px;
+background: #011d3a;
+color: white;
+flex-wrap: wrap;
+font-size: 20px;
+}
+.main-footer .footer-col {
+width: 30%;
+}
+.main-footer h4 {
+font-size: 20px;
+margin: 20px;
+}
+.main-footer .green-text {
+color: #00cc66;
+}
+.main-footer ul {
+list-style: none;
+padding: 20px;
+}
+.main-footer ul li {
+margin-bottom: 6px;
+}
 /* Tablets (landscape and portrait) */
 @media (max-width: 1024px) {
   .logo {

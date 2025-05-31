@@ -1,76 +1,89 @@
 *{
-    margin: 0;
-    padding: 0;
-    font-family: 'Open Sans';
-    
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans';
+  
 }
 body{
-  background-color: #fffafa;
+background-color: #fffafa;
 }
 header{
-    background-color: #4EB528;
-    color: white;
-    font-size: 25px;
-    padding: 10px;
-    text-align: center;
+  background-color: #4EB528;
+  color: white;
+  font-size: 25px;
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+.hamburgers{
+display:none ;
 }
 .head{
-    margin: 10px;
-    width: 100%;
-    height: 250px;
-    border: 4px solid whitesmoke;
+  margin: 10px;
+  width: 100%;
+  height: 250px;
+  border: 4px solid whitesmoke;
+  
 }
 .logo{
-    display: flex;
-    flex-direction: row;
-    margin: 10px;
-    padding-left: 50px;
-    padding-top: 30px;
-    gap: 400px;
+  display: flex;
+  flex-direction: row;
+  margin: 100px;
+  padding-left: 50px;
+  padding-top: 30px;
+  gap: 400px;
 }
 #searchForm {
-    display: flex;
-    align-items: center;
-    justify-content: center;
- 
-  }
-  
-  #searchInput {
-    font-size: large;
-    padding: 10px;
-    width: 350px;
-    border: 3px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  button {
-    padding: 10px 15px;
-    margin-left: 8px;
-    background-color: #FF7C08;
-    font-size: 20px;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  .navbar {
-    padding-left: 300px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: black;
-    font-weight: bolder;
-    font-size: 35px;
-    position: fixed;
-    z-index: 1000;
-    top: 0;
-    width: 100%;
-  }
- 
-  
-  .navbar-brand {
-    font-weight: bold;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+#searchInput {
+  font-size: large;
+  padding: 10px;
+  width: 350px;
+  border: 3px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 15px;
+  margin-left: 8px;
+  background-color: #FF7C08;
+  font-size: 20px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.navbar {
+  padding-left: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+  font-weight: bolder;
+  font-size: 35px;
+  position: fixed;
+  top: 50px;
+  background-color: white;
+  z-index: 1000;
+ /* height: 100px; */
+   width: 100%;     
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
   
   .navbar-nav {
     list-style: none;
